@@ -3,6 +3,7 @@ FROM php:8.1-fpm-alpine
 RUN apk update \
     && apk upgrade \
     && apk add --no-cache bash \
+    && apk add --update nodejs npm \
      sudo \
     # php の拡張モジュール
     && docker-php-ext-install pdo_mysql mysqli \
